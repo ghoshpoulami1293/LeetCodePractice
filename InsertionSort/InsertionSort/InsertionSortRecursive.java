@@ -21,6 +21,18 @@ public class InsertionSortRecursive {
         return insertionSortCalculation(array,array.length);
     }
     private static int[] insertionSortCalculation(int[] array, int length) {
-        return null;
-    } 
-}
+       if(length<=1){
+         return array;
+       }else{
+         insertionSortCalculation(array, length-1);
+       int temp = array[length-1];
+       int j= length-2;
+       while(j>=0 && array[j]>temp){
+            array[j+1]=array[j];
+            j--; 
+        }
+        array[j+1]=temp;        
+       }
+      return array;
+    }     
+ }

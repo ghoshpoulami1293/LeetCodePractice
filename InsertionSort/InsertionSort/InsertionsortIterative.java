@@ -15,6 +15,11 @@ public class InsertionsortIterative {
         for (int i : sortedArray){
             System.out.print(i + " ");
         }  
+        int[] sortedArray2 = insertionSortCalculation2(array, array.length);
+        System.out.println("Sorted array = ");
+        for (int i : sortedArray2){
+            System.out.print(i + " ");
+        }  
         scanner.close();   
     }
     private static int[] insertionSort(int[] array) {        
@@ -50,5 +55,34 @@ public class InsertionsortIterative {
         int temp = array[left];
         array[left]=array[right];
         array[right]=temp;  
-    }  
-}
+    } 
+    
+    //implementation using temp variable
+    private static int[] insertionSortCalculation2(int[] array, int length) {
+        if (length<=1){
+            return array;
+        }
+        else{
+            
+            //start from the 1st index
+            for(int i=1;i<array.length;i++){
+                //set j = i such that j-1 and j can be compared
+                int temp= array[i];
+                int j=i-1;
+
+                // starting at index 1 , so j>0
+                // compare left value vs right (j-1 th value vs jth value in the array)
+                while (j>0 && array[j]>temp) 
+                {
+                    //shift element to right
+                    array[j+1] = array[j];
+                    j--;  
+                }
+                    //insert the value of temp into teh prev opening
+                    array[j+1]=temp;               
+                }return array;
+            }
+                
+        }       
+    }
+
