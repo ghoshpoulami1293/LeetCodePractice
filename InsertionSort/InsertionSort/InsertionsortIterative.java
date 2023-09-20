@@ -21,6 +21,7 @@ public class InsertionsortIterative {
         return insertionSortCalculation(array,array.length);
     }
    
+    //without using separate temp variable for comparison with temp vs left elements
     private static int[] insertionSortCalculation(int[] array, int length) {
         if (length<=1){
             return array;
@@ -37,14 +38,17 @@ public class InsertionsortIterative {
                 while (j>0 && array[j-1]>array[j]) 
                 {
                     //if((j-1 th value > jth value in the array), swap
-                    //once swapped, decrement j, so that the newly placed element can be compared with its left value                   
-                    int temp = array[j-1];
-                    array[j-1]=array[j];
-                    array[j]=temp;  
+                    //once swapped, decrement j, so that the newly placed element can be compared with its left value 
+                    swap(array, j-1, j);
                     j--;                 
                 }
             }
                 return array;
         }       
+    }
+    private static void swap(int[] array, int left, int right) {
+        int temp = array[left];
+        array[left]=array[right];
+        array[right]=temp;  
     }  
 }
