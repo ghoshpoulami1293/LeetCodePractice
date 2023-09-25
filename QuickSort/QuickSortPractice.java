@@ -3,7 +3,7 @@ package QuickSort;
 public class QuickSortPractice {
 
     public static void main(String args[]){      
-      int[] array={3,5,9,2,8,6,1,4,0};  
+      int[] array={3,5,9,8,2,6,1,4,0};  
 
       //print the initial array 
         System.out.println("Initial array = " );     
@@ -79,5 +79,5 @@ public class QuickSortPractice {
         int tmp = array[left]; 
         array[left] = array[right]; 
         array[right] = tmp;           
-    } 
+    }
 }
