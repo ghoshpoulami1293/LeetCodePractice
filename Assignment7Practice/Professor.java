@@ -9,6 +9,7 @@ public class Professor {
     private double averageRating= 0.0;
     private double ratingOverallQuality;
     private double ratingLevelOfDifficulty;
+    private int countOfRatings=1;
 
     public Professor(String name, String lastName, String universityName, String subject, double ratingOverallQuality,
             double ratingLevelOfDifficulty) {
@@ -56,9 +57,16 @@ public class Professor {
         this.subject = subject;
     }
     public double addRating(double ratingOverallQuality, double ratingLevelOfDifficulty){
-        this.averageRating = (ratingOverallQuality+ ratingLevelOfDifficulty)/2;
+        double totalOverallRating = this.ratingOverallQuality * countOfRatings + ratingOverallQuality;
+        double totalDifficultyRating = this.ratingLevelOfDifficulty * countOfRatings + ratingLevelOfDifficulty;
+        countOfRatings++;
+
+        this.ratingOverallQuality = totalOverallRating / countOfRatings;
+        this.ratingLevelOfDifficulty = totalDifficultyRating / countOfRatings;
+        this.averageRating = (this.ratingOverallQuality+ this.ratingLevelOfDifficulty)/2;
         return averageRating;
     }
+    
 
     @Override
     public String toString() {
