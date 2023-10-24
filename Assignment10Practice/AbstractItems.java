@@ -11,13 +11,20 @@ public abstract class AbstractItems implements Items {
         add(items[i]);
        }
     }
-
     @Override
     public String toString() {
-        return "AbstractItems [items=" + Arrays.toString(items) + "]";
-    }
-
+        String elements="Items : ";
+        for(int i =0; i<items.length;i++)
+        {
+            elements+= " " +items[i];
+        }
+        return elements;
+    } 
+    
     public Object[] getItems() {
         return items;
-    }   
+    }
+    public void setItems(Object[] items) {
+        this.items = items;
+    }    
 }
