@@ -1,5 +1,4 @@
 package Practicum2_JM;
-
 import java.util.Arrays;
 
 public abstract class AbstractClass implements Student{
@@ -7,8 +6,10 @@ public abstract class AbstractClass implements Student{
     String id;
     LetterGrade lg;
     int cre;
+
     Grade arr[] = new Grade[1];
     int pos = 0;
+    
     public String getName() {
         return name;
     }

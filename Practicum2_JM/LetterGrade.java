@@ -1,4 +1,4 @@
-package Practicum2_JM;;
+package Practicum2_JM;
 
 /**
  * Represents the possible grades that a student may earn.

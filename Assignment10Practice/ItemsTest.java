@@ -39,10 +39,10 @@ public class ItemsTest {
         }
     }
     public static void main(String[] args) {
-        ArrayOfItems arrayOfitems = new ArrayOfItems(10); 
+        AbstractItems arrayOfitems = new ArrayOfItems(10); 
         testItems(arrayOfitems); 
 
-        ListOfItems listOfItems = new ListOfItems();        
+        AbstractItems listOfItems = new ListOfItems();        
         testItems(listOfItems);
     }
 }
