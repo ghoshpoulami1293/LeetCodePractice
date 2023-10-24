@@ -1,7 +1,5 @@
 package Assignment10Practice;
 
-import java.util.Arrays;
-
 public abstract class AbstractItems implements Items {
     Object[] items;       
 
@@ -20,7 +18,7 @@ public abstract class AbstractItems implements Items {
         }
         return elements;
     } 
-    
+
     public Object[] getItems() {
         return items;
     }
