@@ -1,5 +1,4 @@
 package Assignment8Practice;
-
 import java.util.Arrays;
 
 public class Telephone {
