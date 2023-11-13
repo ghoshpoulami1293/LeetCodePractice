@@ -12,10 +12,11 @@ public class StackImplementation<E> implements Stack<E> {
     }
 
     //add
+    //structure : new node(now top)-->existing node1 -->existing node2-->existing node3 -->null
     @Override
     public void push(E value) {
         Node<E> node = new Node<E>(value);
-        node.setNext(top); // new node next now points to existing top
+        node.setNext(top); //elements stored in the reverse order of insertion,so, new node next now points to existing top, node.next-->top
         top=node;          // top now points to the newest added value.
         size++;
     }

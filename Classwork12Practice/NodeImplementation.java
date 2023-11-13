@@ -34,11 +34,20 @@ public class NodeImplementation<E> implements Queue<E> {
     }
 
     //add to the back of the queue
+    //structure : new node(now back)<--existing node3 <--existing node2<--existing node1 (front)
     @Override
     public void enqueue(E value) {
-        Node<E> node = new Node<E>(value);
-        node.setNext(back);
-        back= node;
+        Node<E> node = new Node<>(value);
+        //for the first element added only
+        if(size==0){ 
+            front= node;
+            back = node;
+        }
+        //for adding more elements after that: 
+        else{
+            back.setNext(node);// elements stored in the order of insertion , so, back.next-->new node
+            back= node;
+        }
         size++;
     }
 
@@ -47,6 +56,10 @@ public class NodeImplementation<E> implements Queue<E> {
     public E dequeue() {
         E value = front.getValue();
         front = front.getNext();
+        //for the last element being dequed
+        if(front==null){
+            back=null;
+        }
         size--;
         return value;
     }
@@ -62,4 +75,20 @@ public class NodeImplementation<E> implements Queue<E> {
     public E peek() {
         return front.getValue();
     }    
+
+    public static void main(String[] args) {
+        NodeImplementation<Integer> queue = new NodeImplementation<>();
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+        queue.enqueue(40);
+
+        System.out.println("Size - " +queue.size());
+        System.out.println("Front element - " +queue.peek());
+
+        while(queue.size()>0){
+            System.out.println(queue.dequeue());
+        }      
+        System.out.println("Size - " +queue.size()); 
+    }
 }
