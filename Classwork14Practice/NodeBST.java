@@ -19,20 +19,20 @@ public class NodeBST implements BinarySearchTree {
 
     private void binaryInsert(BinaryNode node, int value) {
         if(value<node.getValue()){                  // if value less than the root node
-            BinaryNode left = node.getLeft();       // check left subtree
-            if(left!=null){                         // value present in left subtree
-                binaryInsert(left, value);          // recursion
+            BinaryNode left = node.getLeft();       // check thhe left subtree node
+            if(left!=null){                         // value present in left node
+                binaryInsert(left, value);          // recursion on left subtree
             }else{
                     node.setLeft(new BinaryNode(value));// set the left node
             }
         }
 
-        if(value>node.getValue()){                  // if value less than the root node
-            BinaryNode right = node.getRight();     // check right subtree
-            if(right!=null){                        // value present in right subtree
-                binaryInsert(right, value);         // recursion
+        if(value>node.getValue()){                  // if value greater than the root node
+            BinaryNode right = node.getRight();     // check right subtree node
+            if(right!=null){                        // value present in right node
+                binaryInsert(right, value);         // recursion on right subtree
             }else{
-                    node.setRight(new BinaryNode(value));// set the left node
+                    node.setRight(new BinaryNode(value));// set the right node
             }
         }
     }
