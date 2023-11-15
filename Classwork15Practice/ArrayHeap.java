@@ -78,6 +78,13 @@ public class ArrayHeap implements Heap{
       return size;
     }
 
+    
+
+    @Override
+    public String toString() {
+        return "ArrayHeap [array=" + Arrays.toString(array) + ", size=" + size + "]";
+    }
+
     public static void main(String[] args) {
         Heap heap = new ArrayHeap();
         heap.add(24);
