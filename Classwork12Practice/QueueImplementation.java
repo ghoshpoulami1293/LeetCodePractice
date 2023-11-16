@@ -1,13 +1,13 @@
 package Classwork12Practice;
 
-public class NodeImplementation<E> implements Queue<E> {
+public class QueueImplementation<E> implements Queue<E> {
     //maintain 3 properties : size, front, back;
     private int size;
     private Node<E> front;
     private Node<E> back;
 
     //constructor
-    public NodeImplementation() {
+    public QueueImplementation() {
         this.size = 0;
         this.front = null;
         this.back = null;
@@ -77,7 +77,7 @@ public class NodeImplementation<E> implements Queue<E> {
     }    
 
     public static void main(String[] args) {
-        NodeImplementation<Integer> queue = new NodeImplementation<>();
+        QueueImplementation<Integer> queue = new QueueImplementation<>();
         queue.enqueue(10);
         queue.enqueue(20);
         queue.enqueue(30);
