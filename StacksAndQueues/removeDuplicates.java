@@ -7,7 +7,7 @@ Return the final string after this.
 For example, given s = "abbaca", you can first remove the "bb" to get "aaca". 
 Next, you can remove the "aa" to get "ca". This is the final answer.
 */
-public class removeDuplicates{
+public class RemoveDuplicates{
     public String removeDuplicate(String s) {
         StringBuilder stack = new StringBuilder();
         for(char c : s.toCharArray()){

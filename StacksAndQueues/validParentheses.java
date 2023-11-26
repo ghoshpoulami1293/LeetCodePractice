@@ -11,7 +11,7 @@ the same type of closing bracket in the correct order, and each closing bracket 
 For example, s = "({})" and s = "(){}[]" are valid, but s = "(]" and s = "({)}" are not valid.
 */
 
-public class validParentheses {
+public class ValidParentheses{
     public boolean isValid(String s){
         Map<Character,Character> match = new HashMap<Character,Character>();
         match.put('{', '}');

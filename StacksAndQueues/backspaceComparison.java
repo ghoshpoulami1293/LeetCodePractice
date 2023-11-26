@@ -8,7 +8,7 @@ For example, given s = "ab#c" and t = "ad#c", return true.
 Because of the backspace, the strings are both equal to "ac".
 */
 
-public class backspaceComparison {
+public class BackspaceComparison{
     public boolean backspaceCompare(String s, String t) {
         return build(s).equals(build(t));
     }
