@@ -1,4 +1,4 @@
-package TreesAndGraphs;
+package TreesAndGraphs_Trees;
 /**
  * Definition for a binary tree node.
  * public class TreeNode {

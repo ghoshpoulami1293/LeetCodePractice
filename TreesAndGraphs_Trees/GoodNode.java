@@ -1,4 +1,4 @@
-package TreesAndGraphs;
+package TreesAndGraphs_Trees;
 
 public class GoodNode {
 

@@ -1,4 +1,4 @@
-package TreesAndGraphs;
+package TreesAndGraphs_Trees;
 import java.util.Stack;
 /*
  * Given the root node of a binary search tree and two integers low and high, 

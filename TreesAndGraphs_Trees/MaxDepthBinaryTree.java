@@ -1,4 +1,4 @@
-package TreesAndGraphs;
+package TreesAndGraphs_Trees;
 /*
  * Example 1: 104. Maximum Depth of Binary Tree
    Given the root of a binary tree, find the length of the longest path from the root to a leaf.

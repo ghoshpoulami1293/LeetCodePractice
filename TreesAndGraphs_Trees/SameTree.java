@@ -1,4 +1,4 @@
-package TreesAndGraphs;
+package TreesAndGraphs_Trees;
     /*
      * Given the roots of two binary trees p and q, check if they are the same tree. 
      * Two binary trees are the same tree if they are structurally identical and the nodes have the same values.

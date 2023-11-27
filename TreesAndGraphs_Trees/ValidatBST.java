@@ -1,4 +1,4 @@
-package TreesAndGraphs;
+package TreesAndGraphs_Trees;
 /*
  * Example 3: 98. Validate Binary Search Tree
    Given the root of a binary tree, determine if it is a valid BST.

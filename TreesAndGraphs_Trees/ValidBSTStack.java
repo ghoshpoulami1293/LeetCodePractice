@@ -1,4 +1,4 @@
-package TreesAndGraphs;
+package TreesAndGraphs_Trees;
 import java.util.Stack;
 /*
  * Example 3: 98. Validate Binary Search Tree
