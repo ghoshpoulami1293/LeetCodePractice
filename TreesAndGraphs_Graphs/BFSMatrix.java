@@ -10,6 +10,7 @@ For example, given mat = [[0,0,0],[0,1,0],[1,1,1]], return [[0,0,0],[0,1,0],[1,2
 package TreesAndGraphs_Graphs;
 
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class BFSMatrix {
     public class State{
